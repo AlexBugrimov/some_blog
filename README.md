@@ -1,11 +1,13 @@
 # Blog
 
+[![checkstyle](https://github.com/AlexBugrimov/some_blog/actions/workflows/checkstyle.yml/badge.svg)](https://github.com/AlexBugrimov/some_blog/actions/workflows/checkstyle.yml)
+
 ### Необходимо реализовать консольное CRUD приложение, которое имеет следующие сущности:
 
-Writer (id, firstName, lastName, List<Post> posts)
-Post (id, content, created, updated, List<Label> labels)
-Label (id, name)
-PostStatus (enum ACTIVE, UNDER_REVIEW, DELETED)
+* Writer (id, firstName, lastName, List<Post> posts)
+* Post (id, content, created, updated, List<Label> labels)
+* Label (id, name)
+* PostStatus (enum ACTIVE, UNDER_REVIEW, DELETED)
 Каждая сущность имеет поле Status. В момент удаления, мы не удаляем запись из файла, а меняем её статус на DELETED.
 
 ### В качестве хранилища данных необходимо использовать текстовые файлы:
@@ -37,7 +39,6 @@ interface WriterRepository extends GenericRepository<Writer, Integer>{}
 class GsonWriterRepositoryImpl implements WriterRepository{}
 ```
 
-Для работы с json необходимо использовать библиотеку Gson(https://mvnrepository.com/artifact/com.google.code.gson/gson)
-Для импорта зависимостей - Maven/Gradle на выбор.
-
-Результатом выполнения задания должен быть отдельный репозиторий с README.md файлом, который содержит описание задачи, проекта.
+* Для работы с json необходимо использовать библиотеку Gson(https://mvnrepository.com/artifact/com.google.code.gson/gson)
+* Для импорта зависимостей - Maven/Gradle на выбор.
+* Результатом выполнения задания должен быть отдельный репозиторий с README.md файлом, который содержит описание задачи, проекта.
